@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            table {
+                border-collapse: collapse;
+                width: 100%;
+                font-size: 12pt;
+            }
+
+            th, td {
+                border: 1pt solid #D8D9DA;
+                text-align: left;
+                padding: 8px;
+            }
+
+            th {
+                background-color: #D6EFED;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Empolyee Name</th>
+                        <th>Designation</th>
+                        <th>Date of Joining</th>
+                        <th>Salary</th>
+                </tr>
+            </thead>
+        </table>
+    </body>
+
+    <xsl:for-each select="emplouees/employee">
+        <xsl:if test="Designation = 'Technical Writer' ">
+         
+        <tr>
+           <td><xsl:for-each select="EmployeeName"/></td>
+           <td><xsl:for-each select="Designation"/></td>
+           <td><xsl:for-each select="DateofJoining"/></td>
+           <td><xsl:for-each select="Address"/></td>
+           <td><xsl:for-each select="Salary"/></td>
+        </tr>
+        </xsl:if>
+    </xsl:if test="Salary > 5000000 and Salary < 700000">
+     
+    <tr>
+        <td><xsl:value-of select="EmployeeName"/></td>
+        <td><xsl:value-of select="Designation"/></td>
+        <td><xsl:value-of select="DateofJoining"/></td>
+    </tr>
+</xsl:if>
+    </xsl:for-each>
+   </tbody>
+ </table>  
+
+</body>
+</html>

@@ -1,0 +1,9 @@
+<employees>
+    <employee>
+        <EmployeeName>Xyz Dior</EmployeeName>
+        <Designation>Technical Writer</Designation>
+        <DateofJoining>2022-01-05</DateofJoining>
+        <Address>Street Road Main</Address>
+        <Salary>>6000000</Salary>
+    </employee>
+</employees>
